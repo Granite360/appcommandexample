@@ -11,9 +11,6 @@ class Client(discord.Client):
         await tree.sync(guild = discord.Object(id = guildid))
         print(f'Logged on as {self.user}!')
 
-    async def on_message(self, message):
-        print(f'Message from {message.author}: {message.content}')
-
 intents = discord.Intents.default()
 client = Client(intents=intents)
 tree = app_commands.CommandTree(client)
